@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="theme-color" content="#101827">
+  <title>Estaciona Fácil</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="hud" aria-label="Placar">
+      <div><small>Fase</small><strong id="phase">1</strong></div>
+      <div><small>Pontos</small><strong id="score">0</strong></div>
+      <div><small>Tempo</small><strong id="time">00:00</strong></div>
+      <div><small>Estacionados</small><strong id="parked">0</strong></div>
+      <div><small>Restantes</small><strong id="remaining">0</strong></div>
+      <div><small>Batidas</small><strong id="crashes">0</strong></div>
+      <div><small>Recorde</small><strong id="best">0</strong></div>
+    </header>
+
+    <section class="toolbar" aria-label="Ações do jogo">
+      <div class="brand"><span>🅿️</span> Estaciona Fácil</div>
+      <div>
+        <button id="pauseBtn" type="button">⏸ Pausar</button>
+        <button id="restartBtn" type="button">↻ Reiniciar</button>
+        <button id="soundBtn" type="button" aria-pressed="true">🔊 Som</button>
+      </div>
+    </section>
+
+    <section class="game-shell">
+      <canvas id="game" width="1000" height="600" aria-label="Estacionamento visto de cima"></canvas>
+      <div id="message" class="toast" role="status" aria-live="polite"></div>
+      <div id="overlay" class="overlay">
+        <div class="panel">
+          <p class="eyebrow">JOGO DE MANOBRISTA</p>
+          <h1 id="overlayTitle">Estaciona Fácil</h1>
+          <p id="overlayText">Leve cada carro até a vaga indicada sem bater. Pare totalmente e alinhe o carro dentro da vaga.</p>
+          <div id="instructions" class="instructions">
+            <span><kbd>W</kbd>/<kbd>↑</kbd> acelerar</span>
+            <span><kbd>S</kbd>/<kbd>↓</kbd> frear e dar ré</span>
+            <span><kbd>A D</kbd>/<kbd>← →</kbd> virar</span>
+            <span><kbd>P</kbd>/<kbd>Esc</kbd> pausar</span>
+          </div>
+          <button id="mainBtn" class="primary" type="button">Jogar</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="touch-controls" aria-label="Controles de toque">
+      <div class="steering">
+        <button data-control="left" aria-label="Virar à esquerda">◀</button>
+        <button data-control="right" aria-label="Virar à direita">▶</button>
+      </div>
+      <div class="pedals">
+        <button data-control="forward" aria-label="Acelerar">▲<small>ACELERAR</small></button>
+        <button data-control="back" aria-label="Frear e dar ré">▼<small>RÉ / FREIO</small></button>
+      </div>
+    </section>
+    <p class="hint">Vaga-alvo piscando • pare e alinhe o carro completamente dentro dela</p>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
