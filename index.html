@@ -47,18 +47,27 @@
       </div>
     </section>
 
-    <section class="touch-controls" aria-label="Controles de toque">
-      <div class="steering">
-        <button data-control="left" aria-label="Virar à esquerda">◀</button>
-        <button data-control="right" aria-label="Virar à direita">▶</button>
+    <section class="touch-controls" aria-label="Controle virtual do jogo">
+      <div class="gamepad-side steering" aria-label="Direcional">
+        <span class="control-title">DIREÇÃO</span>
+        <div class="dpad">
+          <span class="dpad-bar" aria-hidden="true"></span>
+          <button data-control="left" aria-label="Virar à esquerda">◀</button>
+          <i class="dpad-center" aria-hidden="true"></i>
+          <button data-control="right" aria-label="Virar à direita">▶</button>
+        </div>
       </div>
-      <div class="pedals">
-        <button data-control="forward" aria-label="Acelerar">▲<small>ACELERAR</small></button>
-        <button data-control="back" aria-label="Frear e dar ré">▼<small>RÉ / FREIO</small></button>
+      <div class="gamepad-grip" aria-hidden="true"><span>ESTACIONA</span><b>FÁCIL</b></div>
+      <div class="gamepad-side pedals" aria-label="Botões de ação">
+        <span class="control-title">AÇÃO</span>
+        <div class="action-buttons">
+          <label class="action action-brake"><button data-control="back" aria-label="Frear e dar ré"><b>B</b></button><small>FREIO / RÉ</small></label>
+          <label class="action action-gas"><button data-control="forward" aria-label="Acelerar"><b>A</b></button><small>ACELERAR</small></label>
+        </div>
       </div>
     </section>
     <p class="hint">Vaga-alvo piscando • pare e alinhe o carro completamente dentro dela</p>
   </main>
-  <script src="game.js"></script>
+  <script src="game.js?v=3"></script>
 </body>
 </html>
