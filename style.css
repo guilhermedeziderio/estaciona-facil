@@ -9,3 +9,28 @@
 .touch-controls{position:relative;align-items:center;gap:12px;padding:12px 16px;border:1px solid #344862;border-radius:30px;background:linear-gradient(155deg,#24344d,#111b2b);box-shadow:inset 0 2px 2px #ffffff12,0 9px 18px #0008}
 .touch-controls>div{gap:0}.gamepad-side{display:flex;flex-direction:column;align-items:center}.control-title{color:#8295ae;font-size:.55rem;font-weight:900;letter-spacing:.14em;margin-bottom:5px}.gamepad-grip{display:flex!important;flex-direction:column;align-items:center;color:#60748e;font-size:.55rem;font-weight:900;letter-spacing:.1em}.gamepad-grip b{color:#41e6a1;font-size:.65rem}.dpad{position:relative;display:grid;grid-template-columns:54px 30px 54px;align-items:center;height:70px}.dpad-bar{position:absolute;left:5px;right:5px;height:48px;border-radius:13px;background:#090f19;box-shadow:inset 0 3px 5px #000,0 3px 0 #34445b}.dpad button{position:relative;z-index:2;width:54px;height:48px;border:0;background:linear-gradient(#3c4d64,#202d40);color:#dce9f8;font-size:1.25rem;box-shadow:inset 0 1px #ffffff24,0 4px 0 #080d15}.dpad button:first-of-type{border-radius:12px 4px 4px 12px}.dpad button:last-of-type{border-radius:4px 12px 12px 4px}.dpad-center{position:relative;z-index:3;width:30px;height:48px;background:#28374c;box-shadow:inset 0 1px #ffffff18}.action-buttons{display:flex;align-items:center;gap:13px;transform:rotate(-12deg)}.action{display:flex;flex-direction:column;align-items:center;gap:5px}.action button{width:58px;height:58px;border-radius:50%;border:3px solid #0b111c;color:#fff;font-size:1.25rem;box-shadow:inset 0 3px 3px #ffffff45,inset 0 -4px 4px #0004,0 5px 0 #080d15,0 7px 12px #0008}.action-gas button{background:linear-gradient(145deg,#4beaab,#149b69)}.action-brake button{background:linear-gradient(145deg,#ff7180,#c72e43)}.action small{display:block;font-size:.5rem;font-weight:900;color:#b8c7da;transform:rotate(12deg);white-space:nowrap}.touch-controls button.active{transform:translateY(4px);filter:brightness(1.25);box-shadow:inset 0 2px 5px #0007,0 1px 0 #080d15}.dpad button.active{transform:translateY(3px)}
 @media (max-width:480px){.touch-controls{padding:10px 9px;border-radius:24px}.gamepad-grip{display:none!important}.dpad{grid-template-columns:48px 24px 48px}.dpad button{width:48px}.dpad-center{width:24px}.action-buttons{gap:8px}.action button{width:54px;height:54px}}
+
+/* Refinamento móvel: dois módulos amplos, como um controle portátil. */
+@media (hover:none),(max-width:800px){
+  .touch-controls{display:flex;min-height:112px;margin:10px 4px 4px;padding:7px 10px;border:0;border-radius:0;background:transparent;box-shadow:none;overflow:visible}
+  .gamepad-grip{display:none!important}
+  .gamepad-side{position:relative;width:142px;height:100px;justify-content:center;border:1px solid #354963;border-radius:48px;background:radial-gradient(circle at 45% 35%,#2d405b,#111b2b 72%);box-shadow:inset 0 2px 3px #ffffff18,0 7px 14px #0008}
+  .control-title{position:absolute;top:7px;margin:0;font-size:.48rem;color:#8ca0ba}
+  .dpad{grid-template-columns:55px 25px 55px;height:58px;margin-top:8px}
+  .dpad-bar{left:1px;right:1px;height:50px;border-radius:16px}
+  .dpad button{width:55px;height:50px;font-size:1.35rem}
+  .dpad-center{width:25px;height:50px}
+  .action-buttons{gap:10px;margin-top:8px;transform:none}
+  .action{position:relative;gap:0}
+  .action button{width:60px;height:60px;font-size:1.35rem}
+  .action small{position:absolute;top:63px;font-size:.47rem;transform:none}
+  .touch-controls button{touch-action:none;-webkit-tap-highlight-color:transparent}
+}
+@media (max-width:360px){
+  .touch-controls{padding-inline:2px}
+  .gamepad-side{width:134px}
+  .dpad{grid-template-columns:51px 24px 51px}
+  .dpad button{width:51px}
+  .dpad-center{width:24px}
+  .action button{width:56px;height:56px}
+}
