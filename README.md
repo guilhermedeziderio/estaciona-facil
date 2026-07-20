@@ -1,6 +1,6 @@
 # Estaciona Fácil
 
-Jogo 2D de estacionamento com visão superior. Você é um manobrista: conduza cada carro até a vaga-alvo, pare e alinhe com precisão, evitando paredes, carros e obstáculos. São cinco fases progressivas, com pontuação, penalidades, sons gerados no navegador e recorde salvo localmente.
+Jogo 2D de estacionamento com visão superior. Você é um manobrista: conduza carros e até um ônibus até a vaga-alvo, pare e alinhe com precisão, evitando paredes, veículos e obstáculos. São doze fases progressivas, incluindo baliza, avenidas com trânsito inteligente e uma fila que aguarda o jogador liberar a rua, com pontuação, penalidades, música-tema e efeitos sonoros gerados no navegador.
 
 ## Controles
 
